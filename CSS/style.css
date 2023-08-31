@@ -1,0 +1,259 @@
+* {
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333;
+    color: antiquewhite;
+    /* box-sizing: border-box; */
+}
+
+nav {
+    background-color: #333;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 60px;
+    min-width: 100%;
+    /* position: fixed; */
+    z-index: 10;
+}
+
+nav .logo img {
+    margin-left: 40px;
+    width: 50px;
+}
+
+nav .container-nav {
+    list-style: none;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    width: 30%;
+    margin: auto 10px auto 0px;
+}
+
+nav .humbarger {
+    margin-right: 20px;
+    display: none;
+}
+
+nav .humbarger .bar {
+    width: 30px;
+    height: 2px;
+    margin: 7px;
+    background: #b1d4e0;
+}
+
+nav .container-nav a {
+    color: antiquewhite;
+    text-align: center;
+    text-decoration: none;
+    padding: 15px 13px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+/* ini main */
+
+.banner {
+    height: 500px;
+    background-image: url(https://wallpaperaccess.com/full/2897948.jpg);
+    background-repeat: no-repeat;
+    background-size: 1366px 578px;
+    color: antiquewhite;
+    /* margin-top: 10px; */
+    padding: 40px 80px;
+    /* filter: blur(134px); */
+}
+
+.our-facilitation {
+    height: 371px;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    /* border: 3px solid; */
+}
+
+/* Mengatur judul h2 */
+.our-facilitation h2 {
+    /* font-size: 24px; */
+    /* border: 3px solid; */
+    padding: 42px 110px;
+}
+
+.circle {
+    /* border: 3px solid; */
+    margin-left: 135px;
+    display: flex;
+}
+
+
+/* Mengatur kontainer untuk foto-foto agar jd lingkaran */
+.circle .foto img {
+    /* display: inline-block; */
+    width: 145px;
+    height: 145px;
+    background-color: white;
+    color: white;
+    border-radius: 50%;
+    margin: 0px 45px;
+    /* border: 3px solid black; */
+    /* padding: 20px; */
+}
+
+/* mengatur letak p */
+.circle .foto p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Message Us */
+/* Tata letak dasar untuk elemen-elemen dalam message-container */
+.message-container {
+    display: flex;
+}
+form{
+    /* display: ; */
+    width: 50%;
+    flex-direction: row;
+    align-items: flex-start;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+    margin: 30px;
+
+}
+
+/* .form-label  */
+label {
+    padding: 0px 20px 20px 0px;
+    display: inline-block;
+    /* padding: 3px; */
+}
+
+/* .form-input  */
+input[type=text], textarea
+{
+    width: 100%;
+    padding: 3px;
+    resize: vertical;
+}
+
+input[type=date]{
+
+    width: 100%;
+    padding: 3px;
+}
+
+
+.form-group{
+    width: 100%;
+    /* margin-left: 40px; */
+}
+.form-group .form-label{
+    float: left;
+    width: 40%;
+    margin-top: 5px;
+}
+.form-group .form-input{
+    float: left;
+    width: 60%;
+    margin-top: 6px;
+}
+.form-group [type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 30px;
+}
+/* Mengatur lebar dan jarak antara form-group dan form-output */
+.form-group:after {
+    /* flex: 1; */
+    max-width: calc(50% - 10px);
+    /* 50% width dengan jarak 10px di antara */
+    /* margin-bottom: 20px; */
+    content: "";
+    display: table;
+    clear: both;
+    
+
+}
+
+.form-output {
+    /* flex: 1; */
+    max-width: calc(50% - 10px);
+    margin: 30px;
+    /* 50% width dengan jarak 10px di antara */
+}
+
+
+
+
+
+/* ====================
+Responsive Section
+=======================*/
+
+/* Tablet desktop :768px. */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    nav .container-nav {
+        width: 47%;
+    }
+
+    .nav .container-nav a {
+        font-size: 1rem;
+    }
+
+}
+
+/* Large Mobile :480px. */
+
+@media only screen and (max-width: 767px) {
+
+    nav .container-nav {
+        position: absolute;
+        top: 12vh;
+        min-width: 100%;
+        background: rgba(15, 20, 35, 0.99);
+        text-align: center;
+        display: none;
+    }
+
+    /* header .navigation .menu-list li {
+        display: block;
+    } */
+
+    nav .container-nav a {
+        display: block;
+        padding: 20px;
+        transition: color 1s ease, padding 1s ease, background-color 1s ease;
+
+    }
+
+    nav .container-nav a:hover {
+        color: #b1d4e0;
+        padding-left: 30px;
+        background: rgba(177, 212, 224, 0.2);
+    }
+
+
+    nav .humbarger {
+        display: block;
+    }
+}
